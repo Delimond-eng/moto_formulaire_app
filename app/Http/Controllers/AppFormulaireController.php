@@ -66,7 +66,7 @@ class AppFormulaireController extends Controller
         if ($request->hasFile($param)) {
                 $domain = $request->getHttpHost();
                 $image = $request->file($param);
-                $imageName = time() . '.' . $image->getClientOriginalExtension();
+                $imageName = uniqid() . '.' . $image->getClientOriginalExtension();
                 $image->move(public_path('uploads/motos'), $imageName);
                 $path = 'http://' . $domain . '/uploads/motos/' . $imageName;
             return $path;

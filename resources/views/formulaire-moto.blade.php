@@ -135,9 +135,9 @@
                                         <div class="form-group">
                                             <label for="typeUsageMoto">Type Usage *</label>
                                             <select class="form-control" id="typeUsage" name="type_usage" required>
-                                                <option >Personnel</option>
-                                                <option >Taxi</option>
-                                                <!-- Options dynamiques -->
+                                                <option value="" selected hidden>Sélectionnez un type d'usage</option>
+                                                <option value="Personnel">Personnel</option>
+                                                <option value="Taxi">Taxi</option>
                                             </select>
                                         </div>
                                         <div class="form-group">
