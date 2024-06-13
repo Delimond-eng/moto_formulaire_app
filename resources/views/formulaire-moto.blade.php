@@ -110,8 +110,9 @@
                                         <div class="form-group">
                                             <label for="typeDocument">Type Document *</label>
                                             <select class="form-control" id="typeDocument" name="type_document" required>
-                                                <option >Volet jaune</option>
-                                                <option >Carte rose</option>
+                                                <option value="" selected hidden>Sélectionnez le type de document</option>
+                                                <option value="Volet jaune">Volet jaune</option>
+                                                <option value="Carte rose">Carte rose</option>
                                                 <!-- Options dynamiques -->
                                             </select>
                                         </div>

@@ -43,7 +43,9 @@ function cameraManager(
             captureBtn.innerHTML =
                 '<i class="icon-camera-1 mr-1"></i>Faire capture';
             navigator.mediaDevices
-                .getUserMedia({ video: true })
+                .getUserMedia({
+                    video: true,
+                })
                 .then(function (stream) {
                     videoStream = stream;
                     video.srcObject = stream;
@@ -117,4 +119,8 @@ function cameraManager(
 function cleanSelect(selectId, message) {
     let select = document.getElementById(selectId);
     select.innerHTML = `<option value="" selected hidden>Sélectionner ${message}</option>`;
+}
+
+function isMobileDevice() {
+    return /Mobi|Android/i.test(navigator.userAgent);
 }
