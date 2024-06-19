@@ -5,16 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class MotoType extends Model
+class TypeAssurance extends Model
 {
     use HasFactory;
 
-     /**
+
+         /**
      * The database table used by the model.
      *
      * @var string
      */
-    protected $table = 'moto_types';
+    protected $table = 'type_assurances';
 
     /**
      * The primary key for the model.
@@ -29,7 +30,7 @@ class MotoType extends Model
      * @var array
      */
     protected $fillable = [
-        'moto_type_libelle',
+        'type_assurance_libelle',
     ];
 
     /**
@@ -61,5 +62,4 @@ class MotoType extends Model
         'created_at',
         'updated_at',
     ];
-
 }

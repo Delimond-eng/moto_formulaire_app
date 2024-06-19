@@ -37,17 +37,19 @@ class Moto extends Model
         'plaque',
         'chassis',
         'marque',
+        'modele',
+        'couleur',
         'photo_avant',
         'photo_arriere',
+        'profil_droit',
+        'profil_gauche',
         'nbre_chevaux',
         'date_debut_service',
         'validite_assurance',
         'police_assurance',
         'type_usage',
-        'couleur',
-        'type_document',
         'moto_type_id',
-        'modele_id',
+        'marque_id',
         'proprietaire_id',
     ];
 
@@ -81,7 +83,7 @@ class Moto extends Model
         'updated_at',
     ];
 
-    /**
+     /**
      * Generate a unique code.
      *
      * @return string

@@ -31,10 +31,15 @@ class Achat extends Model
      */
     protected $fillable = [
         'achat_prix',
+        'devise',
         'achat_date',
-        'nip_vendeur',
         'nip_acheteur',
+        'nom_vendeur',
+        'telephone_vendeur',
+        'email_vendeur',
+        'adresse_vendeur',
         'moto_id',
+        'moto_npi',
     ];
 
     /**
@@ -69,12 +74,4 @@ class Achat extends Model
         'achat_date',
     ];
 
-
-    /**
-     * Summary of moto
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function moto() :BelongsTo{
-        return $this->belongsTo(Moto::class, foreignKey:'moto_id');
-    }
 }

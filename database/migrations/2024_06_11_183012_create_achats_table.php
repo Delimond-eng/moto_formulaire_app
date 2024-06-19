@@ -16,10 +16,15 @@ return new class extends Migration
         Schema::create('achats', function (Blueprint $table) {
             $table->id();
             $table->string('achat_prix');
+            $table->string('devise')->default('CDF');
             $table->timestamp('achat_date')->nullable();
-            $table->string('nip_vendeur');
             $table->string('nip_acheteur');
+            $table->string('nom_vendeur');
+            $table->string('telephone_vendeur');
+            $table->string('email_vendeur')->nullable();
+            $table->string('adresse_vendeur');
             $table->unsignedBigInteger('moto_id');
+            $table->string('moto_npi');
             $table->string('status')->default('actif');
             $table->timestamps();
         });

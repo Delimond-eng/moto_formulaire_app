@@ -4,17 +4,20 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class MotoType extends Model
+class Assurance extends Model
 {
     use HasFactory;
 
-     /**
+
+
+      /**
      * The database table used by the model.
      *
      * @var string
      */
-    protected $table = 'moto_types';
+    protected $table = 'assurances';
 
     /**
      * The primary key for the model.
@@ -29,7 +32,12 @@ class MotoType extends Model
      * @var array
      */
     protected $fillable = [
-        'moto_type_libelle',
+        'numero_police',
+        'nom_assureur',
+        'date_validite',
+        'type_assurance_id',
+        'moto_id',
+        'moto_npi',
     ];
 
     /**
@@ -62,4 +70,8 @@ class MotoType extends Model
         'updated_at',
     ];
 
+
+    public function moto():BelongsTo{
+        return $this->belongsTo(Moto::class, foreignKey:'moto_id');
+    }
 }

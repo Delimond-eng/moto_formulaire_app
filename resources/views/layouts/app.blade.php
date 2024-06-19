@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Magnifica Questionnaire Form Wizard includes Corona Virus Covid-19 questionnaire">
     <meta name="author" content="Ansonika">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Formulaire d'identification</title>
 
     <!-- Favicons-->
@@ -40,12 +41,12 @@
 </head>
 
 <body>
-    <header class="header_in">
+    <header class="header_in" id="header">
 		<div class="container">
 		    <div class="row">
                 <div class="col-3">
                     <a href="/" class="d-flex align-items-center">
-                        <img src="{{ asset('assets/img/logo-2.png') }}" alt="">
+                        <img src="{{ asset('assets/img/logo-v2.png') }}" alt="">
                     </a>
                 </div>
                 <div class="col-9">
@@ -221,6 +222,7 @@
 
 	<!-- SPECIFIC SCRIPTS -->
 	<script src="{{ asset('assets/js/parallax.min.js') }}"></script>
+    <script src="{{ asset('assets/js/qrcode_styling.js') }}"></script>
     <script src="{{ asset('assets/js/sweetalert2/sweetalert2.min.js') }}"></script>
     @yield('scripts')
 </body>

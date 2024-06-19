@@ -9,7 +9,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class Proprietaire extends Model
 {
     use HasFactory;
-
      /**
      * The database table used by the model.
      *
