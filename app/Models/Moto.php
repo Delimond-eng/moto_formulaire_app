@@ -92,8 +92,8 @@ class Moto extends Model
     {
        do {
             $letters = strtoupper(Str::random(2));
-            $digits = rand(10000000, 99999999);
-            $code = $letters . $digits;
+            $digits = rand(1000, 9999);
+            $code = "KN-"."MT-". $digits."-".$letters;
         } while (self::where('code', $code)->exists());
 
         return $code;
